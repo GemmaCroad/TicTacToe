@@ -10,7 +10,7 @@ The game involves two players taking turns to mark spaces in a 3x3 grid , and th
 How this was made?
 This version of Tic Tac Toe uses HTML, Javascript and jQuery and is styled with some very basic CSS. I wanted to keep the appearance very simple and focus more on the code. 
 
-My approach to this was to first get it working and then tidy it up. There was a lot of console logging during the code writing process to make sure functions were behaving as expected and to help debug. Initially my code was long and repetitive and instead of making my game "pretty" I chose to focus on making the code fairly tight and efficent. 
+My approach to this was to first get it working and then tidy it up. There was a lot of console logging during the code writing process to make sure functions were behaving as expected and to help debug. Initially my code was long and repetitive and instead of making my game "pretty" I chose to focus on making the code fairly tight and efficient. 
 
 I would have liked to have spent more time on the CSS in the end and made it a bit nicer to look at but my emhpasis for this project was always on the code. 
 
