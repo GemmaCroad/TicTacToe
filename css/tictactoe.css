@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+body {
+	margin: 100px, 100px, 100px, 100px;
+	font-family:'Shadows Into Light', cursive;
+	position: center;
+	text-align: 0 auto;
+
+}
+
+h1 {
+	font-size: 55px;
+	text-align: center;
+	text-decoration: underline;
+
+}
+h2 {
+	font-size: 28px;
+	text-align: center;
+}
+
+#tic_tac_toe{
+	height: 488px;
+  	width: 498px;
+  	margin: 0 auto;
+  	top: 5px;
+  	position: relative;
+  	top: 5px
+}
+
+#tic_tac_toe td{
+	width: 90px;
+	height: 90px;
+	border: 1px solid #aaaaaa;
+	border-collapse: collapse;
+}
+
+.playerOne {
+	font-size: 55px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.playerTwo {
+	font-size: 55px;
+	text-align: center;
+	font-weight: bold;
+  }
+
+button {
+  position: relative;
+  width: 200px;
+  height: 85px;
+  border-radius: 5px;
+  background-color: #B0B0B0 ;
+  color: black;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 22px;
+  -webkit-box-shadow: 0 1px 2px rgba (0, 0, 0, 0.5);
+}
+}
+
+
+
+
+
+
