@@ -1,33 +1,33 @@
 //console.log('Testy mc test?');
 $(document).ready(function() {
 
-var board = [null, null, null, null, null, null, null, null, null];
+var board = [null, null, null, null, null, null, null, null, null]; //start with empty array to represent the board
 
 var player = ['X', 'O'];
 var currentPlayer = player[0];
 var winner = null;
 
-	$("table td").each( function() {
+	$("table td").each( function() { //iterate over the jQuery object, executing the function for each matched element
 		
 		$(this).on('click', function() {
 
 			var selectedSquare = $(this).attr("name");
 			// console.log( selectedSquare );
 
-			if (!winner) {
+			if (!winner) { // if not winner execute the following code
 
-				if (board[selectedSquare] == null) {
+				if (board[selectedSquare] == null) { // check the box is free
 					if (currentPlayer == player[0]) {
-						$(this).text(player[0]);
-						$(this).addClass("playerOne");
-						board[selectedSquare] = currentPlayer;
-						currentPlayer = player[1]
+						$(this).text(player[0]);  // add 'x' to the board
+						$(this).addClass("playerOne");  
+						board[selectedSquare] = currentPlayer; // ammend the array item to the current player
+						currentPlayer = player[1] // swap to play two ready for next turn
 					} 
 					else {
-						$(this).text(player[1]);
+						$(this).text(player[1]);  // add 'o' to the board
 						$(this).addClass("playerTwo");
-						board[selectedSquare] = currentPlayer;
-						currentPlayer = player[0];
+						board[selectedSquare] = currentPlayer; // ammend the array item to the current player
+						currentPlayer = player[0];  // swap back to player one again
 					}
 					console.log(board);
 				}
@@ -35,7 +35,7 @@ var winner = null;
 					alert("That square is already taken - try again!");
 				}
 
-				checkForWinner(player[0]);
+				checkForWinner(player[0]);  // run functions to check for winner or draw
 				checkForWinner(player[1]);
 				checkForDraw();
 
@@ -44,12 +44,12 @@ var winner = null;
 				}
 
 			} else {
-				alert("The game is over already... The winner was " + winner);
+				alert("The game is over already... The winner was " + winner);  // if player keeps trying to click after the game is over display this message
 			}
 		})
 	})
 
-var checkForWinner = function(p) {
+var checkForWinner = function(p) { // function to check the winning combinations against the game board
 
 	if (
 		(board[0] == p && board[1] == p && board[2] == p) || // first row
@@ -67,7 +67,7 @@ var checkForWinner = function(p) {
 	}
 }
 
-var checkForDraw = function () {
+var checkForDraw = function () { // function to check if it is a drawer, are all squares taken but no winner
 	if (
 		(board[0] != null && board[1] != null && board[2] != null && board[3] != null && board[4] != null && board[5] != null && board[6] != null && board[7] != null && board[8] != null)
 
@@ -76,12 +76,12 @@ var checkForDraw = function () {
 	}
 }
 
-	$("button").on('click', function() {
-		board = [null, null, null, null, null, null, null, null, null];
-		$("table td").removeClass("playerOne playerTwo");
-		$("table td").text("");
+	$("button").on('click', function() { 
+		board = [null, null, null, null, null, null, null, null, null];  // reset all values to null
+		$("table td").removeClass("playerOne playerTwo"); // remove css for each player
+		$("table td").text("");  // remove text on the board
     	console.log(board);
-    	winner = null;
+    	winner = null;  // remove winner so game can be played again
 	})
 
 
