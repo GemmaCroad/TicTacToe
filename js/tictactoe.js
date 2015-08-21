@@ -11,7 +11,7 @@ var winner = null;
 		
 		$(this).on('click', function() {
 
-			var selectedSquare = $(this).attr("name");
+			var selectedSquare = $(this).attr("name"); // click event trigger 
 			// console.log( selectedSquare );
 
 			if (!winner) { // if not winner execute the following code
